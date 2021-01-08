@@ -8,7 +8,9 @@
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">vvvvvvvvvvvvvvvvvv
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <title>Budget Tracker</title>
 </head>
@@ -43,5 +45,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
+  <script src="db.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("Service worker loaded", reg);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
